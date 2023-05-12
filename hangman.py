@@ -76,9 +76,12 @@ def main() -> None:
             print(f'Game Over! The word was {word}.\n')
 
         answer = input('Would you like to play again? y/n? ')
+        while answer.lower().strip() != 'n' and answer.lower().strip() != 'y':  # checks if valid y/n input
+            answer = input('Would you like to play again? y/n? ')
         
     print('\nThanks for playing!')
 
 
 if __name__ == "__main__":
     main()
+
